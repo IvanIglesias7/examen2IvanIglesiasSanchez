@@ -2,19 +2,15 @@ import { NgModule } from '@angular/core';
 import { RouterModule, Routes } from '@angular/router';
 import { PorterosComponent } from './porteros/porteros.component';
 import { PorterosFormComponent } from './porteros-form/porteros-form.component';
-import { ListaPorterosComponent } from './lista-porteros/lista-porteros.component';
 
 const routes: Routes = [
   {
-    //Ruta predeterminada
+    //Ruta predeterminada y donde se deberia mostrar una lista
     path: 'porteros', component: PorterosComponent
   },
   {
     //Ruta para ir al formulario de porteros
     path: 'porteros/edit/:idPortero', component: PorterosFormComponent
-  },
-  {
-    path: 'porteros/lista', component: ListaPorterosComponent
   },
   {
     //Si la ruta no es ninguna de las de arriba, se redirige a la pagina principal
