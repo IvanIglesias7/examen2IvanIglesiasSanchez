@@ -1,4 +1,5 @@
 import { Component, OnInit } from '@angular/core';
+import { FirebaseService } from 'src/app/servicios/firebase.service';
 
 @Component({
   selector: 'app-porteros',
@@ -6,10 +7,27 @@ import { Component, OnInit } from '@angular/core';
   styleUrls: ['./porteros.component.css']
 })
 export class PorterosComponent implements OnInit {
+  coleccion = 'porteros';
+  porteros: any[] = [];
 
-  constructor() { }
+
+  constructor(
+    private firebase: FirebaseService
+  ) {}
 
   ngOnInit(): void {
+    // Cargamos la lista de películas
+    this.firebase.getAll(this.coleccion).subscribe(
+      (resp: any) => {
+        this.porteros = [];
+        resp.forEach( (porteroSnapshot: any) => {
+          this.porteros.push(
+            {
+              documentId: porteroSnapshot.payload.doc.id,
+              data: porteroSnapshot.payload.doc.data()
+            })
+        });
+      }
+    )
   }
-
 }

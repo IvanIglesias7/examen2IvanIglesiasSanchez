@@ -1,1 +1,7 @@
-<p>porteros funciona!</p>
+<h2>Listado de porteros</h2>
+
+<ul *ngIf="porteros">
+  <li *ngFor="let portero of porteros" routerLink="edit/{{ portero.documentId }}" >
+    {{ portero.data.nombre }}
+  </li>
+</ul>

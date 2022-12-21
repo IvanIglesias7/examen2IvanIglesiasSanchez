@@ -11,7 +11,7 @@ const routes: Routes = [
   },
   {
     //Ruta para ir al formulario de porteros
-    path: 'porteros/edit', component: PorterosFormComponent
+    path: 'porteros/edit/:idPortero', component: PorterosFormComponent
   },
   {
     path: 'porteros/lista', component: ListaPorterosComponent
