@@ -14,9 +14,9 @@ const routes: Routes = [
       p.PorterosComponent)
   },
   //Si alguien escribe cualquier ruta que no esté arriba, le hará un redirect a la pagina principal
-  //{
-   //   path: '**', redirectTo: '/', pathMatch: 'full'
-  //}
+  {
+      path: '**', redirectTo: '/', pathMatch: 'full'
+  }
 ];
 
 @NgModule({
