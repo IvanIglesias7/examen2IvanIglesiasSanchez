@@ -6,7 +6,7 @@ import { PorterosComponent } from './porteros/porteros/porteros.component';
 const routes: Routes = [
   {
     //Pagina principal
-    path: '', component: PorterosComponent
+    path: '', component: MainAppComponent
   },
   {
     //Esta pagina va a ser la de porteros, va a heredar a porteros
