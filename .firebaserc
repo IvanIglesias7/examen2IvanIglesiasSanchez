@@ -1,0 +1,14 @@
+{
+  "targets": {
+    "angular-clase-firebase": {
+      "hosting": {
+        "examen2IvanIglesiasSanchez": [
+          "angular-clase-firebase"
+        ]
+      }
+    }
+  },
+  "projects": {
+    "default": "angular-clase-firebase"
+  }
+}
